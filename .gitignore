@@ -1,0 +1,13 @@
+# Models and Checkpoints
+models/
+output_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Temp
+tempCodeRunnerFile.py
