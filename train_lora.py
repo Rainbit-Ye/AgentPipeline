@@ -18,17 +18,11 @@ LEARNING_RATE = 1e-4                    # 学习率
 
 def get_model_path():
     """
-    优先使用 ModelScope 下载模型到本地，解决网络和命名问题
+    直接使用本地千问大模型路径
     """
-    print(f"正在通过 ModelScope 下载/加载模型: {MS_MODEL_ID} ...")
-    try:
-        model_dir = snapshot_download(MS_MODEL_ID, cache_dir='./models')
-        print(f"模型已准备好，路径: {model_dir}")
-        return model_dir
-    except Exception as e:
-        print(f"ModelScope 下载失败: {e}")
-        print("将尝试直接使用 HuggingFace ID (可能会失败)...")
-        return "Qwen/Qwen2.5-1.5B-Instruct" # Fallback
+    model_path = "/home/user1/liuduanye/AgentPipeline/qwen/Qwen2_5-1_5B-Instruct"
+    print(f"正在使用本地模型路径: {model_path}")
+    return model_path
 
 def process_func(example, tokenizer):
     """

@@ -1,6 +1,7 @@
 # Models and Checkpoints
 models/
 output_checkpoints/
+qwen/
 
 # Python
 __pycache__/
